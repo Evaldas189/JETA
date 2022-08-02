@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import styles from '../styles/app.module.scss'
+import Main from './main.jsx'
 
 export default function Home() {
   return (
@@ -10,11 +11,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">JETA!</a>
-        </h1>
-      </main>
+      <Main/>
     </div>
   )
 }

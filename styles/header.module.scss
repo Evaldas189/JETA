@@ -1,0 +1,29 @@
+.search-input {
+    width: 60%;
+    margin-left: 40px;
+
+    input {
+        width: 100%;
+        height: 50px;
+        border: 2px solid #8C34B6;
+        border-radius: 10px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 27px;
+        padding-left: 15px;
+        background-color: rgba(244, 227, 253, 0.4);
+        padding-right: 10px;
+    }
+}
+
+.signIn-text {
+    padding-left: 15px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 29px;
+    color: #000000;
+    text-align: center;
+    padding-top: 13px;
+    flex-wrap: nowrap;  
+    min-width: 130px;
+}
