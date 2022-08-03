@@ -1,5 +1,5 @@
 .search-input {
-    width: 60%;
+    width: 65%;
     margin-left: 40px;
 
     input {
@@ -19,11 +19,37 @@
 .signIn-text {
     padding-left: 15px;
     font-weight: 500;
-    font-size: 24px;
+    font-size: 20px;
     line-height: 29px;
     color: #000000;
     text-align: center;
     padding-top: 13px;
     flex-wrap: nowrap;  
     min-width: 130px;
+}
+
+.header-actions {
+    // display: flex;
+    width: 100%;
+}
+
+.header-navbar {
+    width: max-content;
+    padding: 0 24px;
+    display: flex;
+    align-items: center;
+
+   p {
+        padding: 0 32px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 27px;
+        border-right: 1px solid black;
+    }
+}
+
+@media only screen and (max-width: 899px) {
+    .search-input {
+        display: none;
+    }
 }

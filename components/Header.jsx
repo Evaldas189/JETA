@@ -10,6 +10,8 @@ import styles from "../styles/header.module.scss";
 import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import LanguageIcon from "@mui/icons-material/Language";
+import MenuIcon from '@mui/icons-material/Menu';
+
 
 const Header = () => {
   const [anchorEl, setAnchorEl] = React.useState(null);
@@ -32,16 +34,17 @@ const Header = () => {
           <Typography
             noWrap
             component="div"
-            sx={{ ml: 4, fontSize: 48, overflow: "unset" }}
+            sx={{ ml: 4, fontSize: 48, overflow: "unset", flexGrow: {xs: 10, md: 0} }}
             color={"#C057F1"}
           >
             JETA
           </Typography>
-          <SearchInput
-            className={styles["search-input"]}
-            placeholder="Search..."
-          />
-          {/* {filteredEmails.map(email => {
+          <Box className={styles["header-actions"]} sx={{display: { xs: "none", md: "flex"}}} >
+            <SearchInput
+              className={styles["search-input"]}
+              placeholder="Search..."
+            />
+            {/* {filteredEmails.map(email => {
           return (
             <div className="mail" key={email.id}>
               <div className="from">{email.user.name}</div>
@@ -49,51 +52,62 @@ const Header = () => {
             </div>
           )
         })} */}
-          <Box sx={{ flexGrow: 1 }} />
-          <Box
-            sx={{
-              display: {
-                xs: "none",
-                md: "flex",
-                flexGrow: 10,
-                justifyContent: "end",
-              },
-            }}
+            <Box sx={{ flexGrow: 1 }} />
+            <Box
+              sx={{
+                display: {
+                  xs: "none",
+                  md: "flex",
+                  flexGrow: 10,
+                  justifyContent: "end",
+                },
+              }}
+            >
+              <Typography className={styles["signIn-text"]}>Sign in</Typography>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <LocalFireDepartmentIcon
+                  sx={{ color: "black", fontSize: 30 }}
+                />
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <ShoppingCartCheckoutIcon
+                  sx={{ color: "black", fontSize: 30 }}
+                />
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
+                <LanguageIcon sx={{ color: "black", fontSize: 30 }} />
+              </IconButton>
+            </Box>
+          </Box>
+          <IconButton
+            size="large"
+            edge="end"
+            color="inherit"
+            aria-label="open drawer"
+            sx={{ mr: 2, color: "black", display: { xs: "flex", md: "none"}}}
           >
-            <Typography className={styles["signIn-text"]}>Sign in</Typography>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <LocalFireDepartmentIcon sx={{ color: "black", fontSize: 30 }} />
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <ShoppingCartCheckoutIcon sx={{ color: "black", fontSize: 30 }} />
-            </IconButton>
-            <IconButton
-              size="large"
-              aria-label="show 4 new mails"
-              color="inherit"
-            >
-              <LanguageIcon sx={{ color: "black", fontSize: 30 }} />
-            </IconButton>
-          </Box>
-          <Box sx={{ display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              onClick={handleMobileMenuOpen}
-              color="inherit"
-            >
-              <MoreIcon />
-            </IconButton>
-          </Box>
+            <MenuIcon sx={{fontSize: 32}} />
+          </IconButton>
         </Toolbar>
       </AppBar>
+      <Box className={styles["header-navbar"]}>
+        <Typography>Home</Typography>
+        <Typography>Products</Typography>
+        <Typography>About</Typography>
+        <Typography>Sale</Typography>
+      </Box>
     </Box>
   );
 };
