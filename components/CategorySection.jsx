@@ -61,6 +61,7 @@ const CategorySection = () => {
         <Grid container spacing={3}>
           {categories.slice(0, categoriesLength).map(({ title, image }) => (
             <Grid
+            key={title}
               item
               xs
               sx={{
