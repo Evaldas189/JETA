@@ -1,6 +1,11 @@
 .header-container {
-    width: 75%;
+   width: 75%;
+}
 
+.header-logo {
+    font-size: 40px;
+    overflow: unset;
+    flex-grow: 0,
 }
 
 .search-input {
@@ -37,7 +42,6 @@
 
 .header-navbar {
     justify-content: space-evenly;
-    padding: 0 55px;
     display: flex;
     align-items: center;
     margin-bottom: 10px;
@@ -89,5 +93,14 @@
 @media only screen and (max-width: 899px) {
     .search-input {
         display: none;
+    }
+    .header-navbar{
+        display: none;
+    }
+    .header-container {
+        width: 100%;
+    }
+    .header-logo {
+        font-size: 36px;
     }
 }

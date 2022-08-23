@@ -23,19 +23,14 @@ const Header = () => {
           <Typography
             noWrap
             component="div"
-            sx={{
-              ml: 4,
-              fontSize: 48,
-              overflow: "unset",
-              flexGrow: { xs: 10, md: 0 },
-            }}
+            className={styles["header-logo"]}
             color={"#C057F1"}
           >
             JETA
           </Typography>
           <Box
             className={styles["header-actions"]}
-            sx={{ display: { xs: "none", md: "flex" } }}
+            sx={{ display: { xs: "flex" } }}
           >
             <SearchInput
               className={styles["search-input"]}
@@ -45,15 +40,22 @@ const Header = () => {
             <Box
               sx={{
                 display: {
-                  xs: "none",
-                  md: "flex",
+                  xs: "flex",
                   flexGrow: 10,
                   justifyContent: "end",
                 },
               }}
             >
               <ButtonBase>
-                <Typography className={styles["signIn-text"]}>
+                <Typography
+                  sx={{
+                    display: {
+                      xs: "none",
+                      md: "block",
+                    },
+                  }}
+                  className={styles["signIn-text"]}
+                >
                   Sign in
                 </Typography>
               </ButtonBase>
@@ -80,7 +82,7 @@ const Header = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-                <LanguageIcon sx={{ color: "black", fontSize: 30 }} />
+                <LanguageIcon sx={{ color: "black", fontSize: 30, mr: { xs: 2, md: 0 } }} />
               </IconButton>
             </Box>
           </Box>
@@ -89,7 +91,7 @@ const Header = () => {
             edge="end"
             color="inherit"
             aria-label="open drawer"
-            sx={{ mr: 2, color: "black", display: { xs: "flex", md: "none" } }}
+            sx={{ color: "black", display: { xs: "flex", md: "none" } }}
           >
             <MenuIcon sx={{ fontSize: 32 }} />
           </IconButton>
