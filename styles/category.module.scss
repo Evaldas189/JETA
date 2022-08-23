@@ -1,0 +1,34 @@
+.category-box {
+    width: 150px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    &:hover {
+
+        cursor: pointer;
+        .category-image {
+            transform: scale(1.1)
+        }
+
+        .category-title {
+            color: #C057F1;
+            border-bottom: 2px solid #C057F1;
+        }
+    }
+
+    .category-image {
+        height: 100%;
+        width: 100%;
+        border-radius: 50%;
+    }
+
+    .category-title {
+        padding: 5px;
+        margin-top: 20px;
+        font-weight: 500;
+        font-size: 16px;
+    }
+}
