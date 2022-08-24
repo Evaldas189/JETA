@@ -5,7 +5,9 @@
 .header-logo {
     font-size: 40px;
     overflow: unset;
-    flex-grow: 0,
+    flex-grow: 0;
+    min-width: 85px;
+    z-index: 2;
 }
 
 .search-input {

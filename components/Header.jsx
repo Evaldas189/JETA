@@ -11,10 +11,16 @@ import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import LanguageIcon from "@mui/icons-material/Language";
 import MenuIcon from "@mui/icons-material/Menu";
 import ButtonBase from "@mui/material/ButtonBase";
+import { useState } from "react";
+import Hamburger from 'hamburger-react'
+import MobileMenu from "./MobileMenu";
 
 const Header = () => {
+
+  const [hambOpen, setHambOpen] = useState(false)
   return (
     <Box className={styles["header-container"]} sx={{ flexGrow: 1 }}>
+      {hambOpen ? <MobileMenu/> : null}
       <AppBar
         position="static"
         sx={{ backgroundColor: "white", height: "80px", boxShadow: "none" }}
@@ -64,6 +70,19 @@ const Header = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
+                <LanguageIcon
+                  sx={{
+                    color: "black",
+                    fontSize: 30,
+                    display: { xs: "none", md: "flex" },
+                  }}
+                />
+              </IconButton>
+              <IconButton
+                size="large"
+                aria-label="show 4 new mails"
+                color="inherit"
+              >
                 <LocalFireDepartmentIcon
                   sx={{ color: "black", fontSize: 30 }}
                 />
@@ -72,29 +91,28 @@ const Header = () => {
                 size="large"
                 aria-label="show 4 new mails"
                 color="inherit"
+                sx={{mr: { xs: 2, md: 0 }}}
               >
                 <ShoppingCartCheckoutIcon
                   sx={{ color: "black", fontSize: 30 }}
                 />
               </IconButton>
-              <IconButton
-                size="large"
-                aria-label="show 4 new mails"
-                color="inherit"
-              >
-                <LanguageIcon sx={{ color: "black", fontSize: 30, mr: { xs: 2, md: 0 } }} />
-              </IconButton>
             </Box>
           </Box>
-          <IconButton
-            size="large"
-            edge="end"
-            color="inherit"
-            aria-label="open drawer"
-            sx={{ color: "black", display: { xs: "flex", md: "none" } }}
-          >
-            <MenuIcon sx={{ fontSize: 32 }} />
-          </IconButton>
+          <Box sx={{zIndex: 2}}>
+          <Hamburger
+            toggled={hambOpen}
+            distance="lg"
+            easing="ease-in"
+            rounded
+            hideOutline={false}
+            toggle={() => setHambOpen(!hambOpen)}
+            size={24}
+            direction="left"
+            duration={0.2}
+            color="black"
+          />
+          </Box>
         </Toolbar>
       </AppBar>
       <Box className={styles["header-navbar"]}>
