@@ -99,7 +99,7 @@ const Header = () => {
               </IconButton>
             </Box>
           </Box>
-          <Box sx={{zIndex: 2}}>
+          <Box sx={{zIndex: 2, display: {xs: "flex", md: "none"}}}>
           <Hamburger
             toggled={hambOpen}
             distance="lg"
