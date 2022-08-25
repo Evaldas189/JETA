@@ -42,13 +42,13 @@ const categories = [
 
 const CategorySection = () => {
   const [expanded, setExpanded] = useState(false);
-  const [categoriesLength, setCategoriesLength] = useState(4)
+  const [categoriesLength, setCategoriesLength] = useState(5)
 
   useEffect(() => {
     if(expanded) {
       setCategoriesLength(categories.length)
     }
-    else setCategoriesLength(4)
+    else setCategoriesLength(5)
   }, [expanded])
   
 
