@@ -17,7 +17,7 @@ const Footer = () => {
         <Grid item container xs={12} md={6}>
           <Grid item xs={12}>
             <Box className={styles["info-box"]}>
-              <Typography variant="h6" sx={{ fontWeight: "600" }}>
+              <Typography variant="h6" sx={{ fontWeight: "600", ml: "5px" }}>
                 Informacija
               </Typography>
               <List>

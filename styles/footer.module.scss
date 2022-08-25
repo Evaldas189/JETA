@@ -1,7 +1,7 @@
 .footer-container {
     background-color: #EEC9FF;
     width: 100%;
-    
+
 }
 
 .grid-container {
@@ -23,8 +23,14 @@
             cursor: pointer;
 
             div span {
-                font-weight: 600 !important;
-                color: black !important;
+                font-size: 14px;
+                color: #959595;
+            }
+
+            &:hover {
+                div span {
+                    color: #626161;
+                }
             }
         }
     }
@@ -52,18 +58,20 @@
     }
 
     input[type=submit] {
-        background-color: #979797;
+        background-color: #67EAD2;
+        color: #8C34B6;
+        height: 42px;
         padding: 12px;
         margin: 8px 0;
         display: inline-block;
         box-sizing: border-box;
         cursor: pointer;
-        color: white;
         border: none;
         width: fit-content;
-        outline: 2px solid #979797;
+        outline: 2px solid #bbb6b6;
         border-radius: 4px;
         font-size: 14px;
+        margin-left: 8px;
     }
 
     input[type=submit]:hover {
@@ -93,6 +101,7 @@
         width: 100%;
         padding: 5px 5px;
     }
+
     .info-box {
         padding: 5px;
         padding-left: 20px;

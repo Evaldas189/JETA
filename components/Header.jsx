@@ -6,11 +6,9 @@ import IconButton from "@mui/material/IconButton";
 import Typography from "@mui/material/Typography";
 import SearchInput, { createFilter } from "react-search-input";
 import styles from "../styles/header.module.scss";
-import LocalFireDepartmentIcon from "@mui/icons-material/LocalFireDepartment";
 import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import LanguageIcon from "@mui/icons-material/Language";
-import MenuIcon from "@mui/icons-material/Menu";
-import ButtonBase from "@mui/material/ButtonBase";
 import { useState } from "react";
 import Hamburger from 'hamburger-react'
 import MobileMenu from "./MobileMenu";
@@ -52,19 +50,6 @@ const Header = () => {
                 },
               }}
             >
-              <ButtonBase>
-                <Typography
-                  sx={{
-                    display: {
-                      xs: "none",
-                      md: "block",
-                    },
-                  }}
-                  className={styles["signIn-text"]}
-                >
-                  Sign in
-                </Typography>
-              </ButtonBase>
               <IconButton
                 size="large"
                 aria-label="show 4 new mails"
@@ -83,7 +68,7 @@ const Header = () => {
                 aria-label="show 4 new mails"
                 color="inherit"
               >
-                <LocalFireDepartmentIcon
+                <FavoriteBorderIcon
                   sx={{ color: "black", fontSize: 30 }}
                 />
               </IconButton>
